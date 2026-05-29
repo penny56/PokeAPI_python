@@ -30,5 +30,6 @@ def test_limit_and_offset(limit, offset):
     textDict = json.loads(search_res.text)
 
     # 校验：返回的数据列表长度，必须等于我们请求时限制的 limit 条数
-    assert len(textDict['results']) == limit
+    assert len(textDict['results']) == limit, \
+        f"分页校验失败！请求的 limit 为 {limit}, 但实际返回了 {len(textDict['results'])} 条数据。返回的完整结果为: {textDict['results']}"
 
