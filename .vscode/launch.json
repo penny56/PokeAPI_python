@@ -11,6 +11,14 @@
             "module": "pytest",
             "args": [ "-s", ".\\tests\\test_basic_functions.py" ],
             "console": "integratedTerminal"
+        },
+        {
+            "name": "paging",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [ "-s", ".\\tests\\test_paging_and_data_traversal.py" ],
+            "console": "integratedTerminal"
         }
     ]
 }
